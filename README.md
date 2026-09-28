@@ -17,7 +17,7 @@ The resulting firmware file `FM-1-fixed.fwsc` must not be distributed, as it is 
 
 **Install at your own risk!**
 
-The firmware is running stable for me. The changes are localized, and don’t change the size of the firmware, its memory consumption or its processing time. Hence, I consider them quite low risk. The risk is more about the flashing procedure in general (also applies to stock firmware): If the updater or the FM-1 crash during the firmware flashing, recovery could require hardware tools.
+The firmware is running stable for me. The changes are localized, and don’t modify the size of the firmware, its memory consumption or its processing time. Hence, I consider them quite low risk. The risk is more about the flashing procedure in general (also applies to stock firmware): If the updater or the FM-1 crash during the firmware flashing, recovery could require hardware tools.
 
 ---
 
@@ -37,6 +37,15 @@ The firmware is running stable for me. The changes are localized, and don’t ch
 * Thus, use the V14 firmware upgrade utility to downgrade to V14 first.
 * Then, use the standalone M-UPGRADE to apply my firmware `FM-1-fixed.fwsc`.
 * In case you want to go back to stock V15, you can use the same procedure (downgrade to V14, then upgrade) again.
+
+---
+
+## Thanks
+
+* Kris Naphtali for making me aware of the detune issue and encouraging me along the way.
+* Anhang Li for a [partial reverse-engineering of older firmware](https://github.com/AL-255/FM-1-RE/) that served as a good starting point.
+* [Andrey Grigoryev](https://github.com/kagaimiq/) for the tools that deal with firmware files for the SoC that M-VAVE uses.
+* M-VAVE for making this fun and affordable device.
 
 ---
 

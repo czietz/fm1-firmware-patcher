@@ -3,7 +3,7 @@
 This script applies multiple changes to the firmware of the M-VAVE FM-1 synthesizer:
 
 * Fixes the [implementation of oscillator detune](https://www.elektronauts.com/t/m-vave-fm-1/252170/191) to match Dexed.
-* Removes the reaction to MIDI aftertouch messages – which cause an unexpected strong vibrato.
+* Removes the reaction to MIDI aftertouch messages – which cause an [unexpected strong vibrato](https://www.reddit.com/r/MVaveFM1/comments/1wp422v/comment/pbtfvjx/).
 * Makes the oscilloscope display on the main screen dark blue to make it stand out more.
 * Makes the selection cursor on the FX screen green (purely as a visual indicator that custom FW is running).
 
@@ -24,9 +24,9 @@ The firmware is running stable for me. The changes are localized, and don’t mo
 ## Requirements
 
 * Python
-* The original **V15** firmware, available under “PC Firmware” on [M-VAVE’s download page](http://www.cuvave.com/download).
-* The firmware upgrade utility **M-UPGRADE**, available under “PC Software” on [M-VAVE’s download page](http://www.cuvave.com/download).
-* The **V14 firmware upgrade** utility, available under “Major Update” on [M-VAVE’s download page](http://www.cuvave.com/download).
+* The original **V15** firmware, available as “PC Firmware” on [M-VAVE’s FM-1 product page](http://www.cuvave.com/product?id=fm-1).
+* The firmware upgrade utility **M-UPGRADE**, available as “Update Software” on [M-VAVE’s FM-1 product page](http://www.cuvave.com/product?id=fm-1).
+* The **V14 firmware upgrade** utility, available under “Tone Firmware Update Software” on [M-VAVE’s FM-1 product page](http://www.cuvave.com/product?id=fm-1).
 
 ---
 

@@ -24,7 +24,7 @@ The firmware is running stable for me. The changes are localized, and don’t mo
 ## Requirements
 
 * Python
-* The original **V15** firmware, available as “PC Firmware” on [M-VAVE’s FM-1 product page](http://www.cuvave.com/product?id=fm-1).
+* The original **V15** firmware, [archived from M-VAVE’s FM-1 product page](https://web.archive.org/web/20260925104350/https://yms-file-store.oss-cn-hongkong.aliyuncs.com/software/firmware/FM-1.fwsc).
 * The firmware upgrade utility **M-UPGRADE**, available as “Update Software” on [M-VAVE’s FM-1 product page](http://www.cuvave.com/product?id=fm-1).
 * The **V14 firmware upgrade** utility, available under “Tone Firmware Update Software” on [M-VAVE’s FM-1 product page](http://www.cuvave.com/product?id=fm-1).
 

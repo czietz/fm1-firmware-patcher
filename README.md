@@ -1,13 +1,23 @@
 # M-VAVE FM-1 firmware patcher
 
-This script applies multiple changes to the firmware of the M-VAVE FM-1 synthesizer:
+This script applies multiple changes to the firmware of the M-VAVE FM-1 synthesizer.
+
+For firmware **V15**:
 
 * Fixes the [implementation of oscillator detune](https://www.elektronauts.com/t/m-vave-fm-1/252170/191) to match Dexed.
 * Removes the reaction to MIDI aftertouch messages – which cause an [unexpected strong vibrato](https://www.reddit.com/r/MVaveFM1/comments/1wp422v/comment/pbtfvjx/).
 * Makes the oscilloscope display on the main screen dark blue to make it stand out more.
 * Makes the selection cursor on the FX screen green (purely as a visual indicator that custom FW is running).
 
-Usage: `python patch_firmware.py FM-1.fwsc FM-1-fixed.fwsc`
+Usage: `python patch_firmware_v15.py FM-1.fwsc FM-1-fixed.fwsc`
+
+For firmware **V16**:
+
+* Removes the reaction to MIDI aftertouch messages – which cause an [unexpected strong vibrato](https://www.reddit.com/r/MVaveFM1/comments/1wp422v/comment/pbtfvjx/).
+* Changes the displayed version (on the “Globe 5” page) to “a16” as a visual indicator that custom FW is running.
+* Note that the oscillator detune implementation was already fixed by M-VAVE in V16.
+
+Usage: `python patch_firmware_v16.py FM-1.fwsc FM-1-fixed.fwsc`
 
 The resulting firmware file `FM-1-fixed.fwsc` must not be distributed, as it is under copyright by M-VAVE.
 
@@ -24,7 +34,8 @@ The firmware is running stable for me. The changes are localized, and don’t mo
 ## Requirements
 
 * Python
-* The original **V15** firmware, [archived from M-VAVE’s FM-1 product page](https://web.archive.org/web/20260925104350/https://yms-file-store.oss-cn-hongkong.aliyuncs.com/software/firmware/FM-1.fwsc).
+* *Either*: The original **V15** firmware, [archived from M-VAVE’s FM-1 product page](https://web.archive.org/web/20260925104350/https://yms-file-store.oss-cn-hongkong.aliyuncs.com/software/firmware/FM-1.fwsc).
+* *Or*: The original **V16** firmware, available as “PC Firmware” on [M-VAVE’s FM-1 product page](http://www.cuvave.com/product?id=fm-1).
 * The firmware upgrade utility **M-UPGRADE**, available as “Update Software” on [M-VAVE’s FM-1 product page](http://www.cuvave.com/product?id=fm-1).
 * The **V14 firmware upgrade** utility, available under “Tone Firmware Update Software” on [M-VAVE’s FM-1 product page](http://www.cuvave.com/product?id=fm-1).
 
@@ -32,11 +43,11 @@ The firmware is running stable for me. The changes are localized, and don’t mo
 
 ## Installation
 
-* Patch the V15 firmware with the Python script: `python patch_firmware.py FM-1.fwsc FM-1-fixed.fwsc`
-* M-UPGRADE won’t directly let you upgrade from stock firmware V15 to the changed version, because it thinks both are identical. 
+* Patch the firmware with the Python script: `python patch_firmware_v15.py FM-1.fwsc FM-1-fixed.fwsc` or `python patch_firmware_v16.py FM-1.fwsc FM-1-fixed.fwsc`.
+* M-UPGRADE won’t directly let you upgrade from the stock firmware (V15 or V16) to the changed version, because it thinks both are identical. 
 * Thus, use the V14 firmware upgrade utility to downgrade to V14 first.
 * Then, use the standalone M-UPGRADE to apply my firmware `FM-1-fixed.fwsc`.
-* In case you want to go back to stock V15, you can use the same procedure (downgrade to V14, then upgrade) again.
+* In case you want to go back to stock firmware, you can use the same procedure (downgrade to V14, then upgrade) again.
 
 ---
 
